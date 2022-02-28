@@ -38,3 +38,9 @@ th {
     padding-bottom: 20px;
     padding-top: 20px;
 }
+
+.heartFont {
+    cursor: pointer;
+    opacity: 25%;
+    font-size: xx-large;
+}
