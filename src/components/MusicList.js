@@ -27,7 +27,7 @@ const SongList = () => {
           <td>{s.name}</td>
           <td>{s.subgroup}</td>
           <td>{s.releaseDate}</td>
-          <td><img src={s.coverArt} /></td>
+          <td><img src={s.coverArt} width="150"/></td>
         </tr>)
       }
 

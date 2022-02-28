@@ -5,7 +5,7 @@ import SongList from './components/MusicList';
 function App() {
     return (
       <main>
-        <h1>Personal Favourites Music</h1>
+        <h1>Favourite Music by NCT</h1>
         <Artist />
         <SongList />
       </main>
