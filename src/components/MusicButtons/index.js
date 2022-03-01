@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
-import BOSS from './Audio/NCT-U-BOSS.mp3'
-import DOMINO from './Audio/WAYV-DOMINO.mp3'
+import BOSS from './Audio/COW.mp3'
+import DOMINO from './Audio/SHEEP.mp3'
 
 const MusicButton = () => {
     
@@ -19,32 +19,35 @@ const MusicButton = () => {
 
     const renderAudios = () => audio.map(a => <li key={a.id} onClick={() => handleButtonSelect(a.id)}><strong role="heading" aria-label="song">{a.song}</strong></li>)
          
+    var audioo = new Audio(BOSS);
+
     function handlePlay() {
-        var audio = new Audio(chosenButton.link);
-        audio.play();
-        audio.volume = 0.05;
+        audioo.play();
+        audioo.volume = 0.05;
     }
 
+    
     function handlePause() {
-        if(Audio) {
-            Audio.pause();
-        }
+        audioo.pause();
+        console.log("it worked")
     }
 
     return (
-        <>
-            <h3>Listen to some music here!</h3>
-            <ul> { renderAudios() } </ul>
-            { 
-                chosenButton &&
-                <section className={'button-section'}> 
-                    <button className="play-button" onClick={() => handlePlay()}>Play {chosenButton.song}</button>
-                    <button className="pause-button" onClick={() => handlePause()}>Pause {chosenButton.song}</button>
-                    <button className="stop-button" onClick={() => stop()}>Stop Playing {chosenButton.song}</button>
-                </section>
-            }
-        </>
-    )
+      <>
+        <h3>Listen to some music here!</h3>
+        <ul> {renderAudios()} </ul>
+        {chosenButton && (
+          <section className={"button-section"}>
+            <button className="play-button" onClick={() => handlePlay()}>
+              Play {chosenButton.song}
+            </button>
+            <button className="pause-button" onClick={() => handlePause()}>
+              Pause {chosenButton.song}
+            </button>
+          </section>
+        )}
+      </>
+    );
 }
 
 export default MusicButton
