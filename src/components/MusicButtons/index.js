@@ -22,36 +22,28 @@ const MusicButton = () => {
     function handlePlay() {
         var audio = new Audio(chosenButton.link);
         audio.play();
-        audio.volume = 0.1;
+        audio.volume = 0.05;
     }
 
-    // const handleLike = e => {
-    //     e.preventDefault();
-    //     if (e.target.textContent === "🤍") {
-    //       e.target.textContent = "❤️"
-    //     } else {
-    //       e.target.textContent = "🤍"
-    //     }
-    //   };
-
-    function pause() {
-        var audio = new Audio(chosenButton.link);
-        audio.pause();
+    function handlePause() {
+        if(Audio) {
+            Audio.pause();
+        }
     }
 
     return (
-        <section>
+        <>
             <h3>Listen to some music here!</h3>
             <ul> { renderAudios() } </ul>
             { 
                 chosenButton &&
                 <section className={'button-section'}> 
-                    <button className="play-button" onClick={handlePlay()}>Play {chosenButton.song}</button>
-                    <button className="pause-button" onClick={pause()}>Pause {chosenButton.song}</button>
-                    <button className="stop-button" onClick={stop()}>Stop Playing {chosenButton.song}</button>
+                    <button className="play-button" onClick={() => handlePlay()}>Play {chosenButton.song}</button>
+                    <button className="pause-button" onClick={() => handlePause()}>Pause {chosenButton.song}</button>
+                    <button className="stop-button" onClick={() => stop()}>Stop Playing {chosenButton.song}</button>
                 </section>
             }
-        </section>
+        </>
     )
 }
 
