@@ -32,6 +32,13 @@ const MusicButton = () => {
         console.log("it worked")
     }
 
+    function handleStop() {
+        audioo.pause();
+        audioo.currentTime = 0;
+
+    }
+
+
     return (
       <>
         <h3>Listen to some music here!</h3>
@@ -43,6 +50,9 @@ const MusicButton = () => {
             </button>
             <button className="pause-button" onClick={() => handlePause()}>
               Pause {chosenButton.song}
+            </button>
+            <button className="stop-button" onClick={() => handleStop()}>
+              Stop {chosenButton.song}
             </button>
           </section>
         )}
