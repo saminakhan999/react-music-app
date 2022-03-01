@@ -1,0 +1,11 @@
+.hand-image {
+    z-index: -1;
+    position: absolute;
+    width: 10vw;
+}
+
+.main-header {
+    width: 90vw;
+    text-align: center;
+    margin: auto;
+}

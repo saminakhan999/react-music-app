@@ -1,0 +1,24 @@
+table {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 1px solid black; 
+    width: 90vw; 
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+th {
+    font-size: x-large;
+    color: rgb(255, 162, 178);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.heartFont {
+    cursor: pointer;
+    opacity: 25%;
+    font-size: xx-large;
+}
