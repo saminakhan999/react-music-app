@@ -3,23 +3,23 @@ import './index.css';
 
 const SongList = () => {
     const [song, setSong] = useState([
-        { name: 'Boss',  subgroup: "NCT U", releaseDate: '2018', coverArt:"https://upload.wikimedia.org/wikipedia/en/6/6b/NCT_2018_Empathy_Album_Cover.jpg", like: "🤍"},
+        { id: 1, name: 'Boss',  subgroup: "NCT U", releaseDate: '2018', coverArt:"https://upload.wikimedia.org/wikipedia/en/6/6b/NCT_2018_Empathy_Album_Cover.jpg", like: "🤍"},
 
-        { name: 'Domino',  subgroup: "WayV", releaseDate: '2020', coverArt:"https://www.kpoplyrics.net/wp-content/uploads/2020/06/wayv-awaken-the-world-the-1st-album-cover.jpg", like: "🤍"},
+        { id: 2, name: 'Domino',  subgroup: "WayV", releaseDate: '2020', coverArt:"https://www.kpoplyrics.net/wp-content/uploads/2020/06/wayv-awaken-the-world-the-1st-album-cover.jpg", like: "🤍"},
 
-        { name: 'Limitless',  subgroup: "NCT 127", releaseDate: '2017', coverArt:"https://upload.wikimedia.org/wikipedia/en/6/66/Limitless_EP_Poster.jpg", like: "🤍"},
+        { id: 3, name: 'Limitless',  subgroup: "NCT 127", releaseDate: '2017', coverArt:"https://upload.wikimedia.org/wikipedia/en/6/66/Limitless_EP_Poster.jpg", like: "🤍"},
 
-        { name: 'Sticker',  subgroup: "NCT 127", releaseDate: '2021', coverArt:"https://upload.wikimedia.org/wikipedia/en/1/12/NCT_127_-_Sticker.png", like: "🤍"},
+        { id: 4, name: 'Sticker',  subgroup: "NCT 127", releaseDate: '2021', coverArt:"https://upload.wikimedia.org/wikipedia/en/1/12/NCT_127_-_Sticker.png", like: "🤍"},
 
-        { name: 'Simon Says',  subgroup: "NCT 127", releaseDate: '2018', coverArt:"https://pbs.twimg.com/media/DsSxeJLVYAEFv2Z.jpg", like: "🤍"},
+        { id: 5, name: 'Simon Says',  subgroup: "NCT 127", releaseDate: '2018', coverArt:"https://pbs.twimg.com/media/DsSxeJLVYAEFv2Z.jpg", like: "🤍"},
 
-        { name: 'Lemonade',  subgroup: "NCT 127", releaseDate: '2021', coverArt:"https://upload.wikimedia.org/wikipedia/en/1/12/NCT_127_-_Sticker.png", like: "🤍"},
+        { id: 6, name: 'Lemonade',  subgroup: "NCT 127", releaseDate: '2021', coverArt:"https://upload.wikimedia.org/wikipedia/en/1/12/NCT_127_-_Sticker.png", like: "🤍"},
 
-        { name: 'Dreaming', subgroup: "NCT Dream", releaseDate: '2021', coverArt:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR2xQqYn30pgOBic3os_2OiiiHFD42LvuOZsaGx_eFdlsoja1iT2A4SFBhxSPk-wDwq1s&usqp=CAU", like: "🤍"},
+        { id: 7, name: 'Dreaming', subgroup: "NCT Dream", releaseDate: '2021', coverArt:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR2xQqYn30pgOBic3os_2OiiiHFD42LvuOZsaGx_eFdlsoja1iT2A4SFBhxSPk-wDwq1s&usqp=CAU", like: "🤍"},
 
-        { name: 'Turn Back Time',  subgroup: "WayV", releaseDate: '2020', coverArt:"https://www.kpoplyrics.net/wp-content/uploads/2020/06/wayv-awaken-the-world-the-1st-album-cover.jpg", like: "🤍"},
+        { id: 8, name: 'Turn Back Time',  subgroup: "WayV", releaseDate: '2020', coverArt:"https://www.kpoplyrics.net/wp-content/uploads/2020/06/wayv-awaken-the-world-the-1st-album-cover.jpg", like: "🤍"},
 
-        { name: 'OK!',  subgroup: "NCT U", releaseDate: '2021', coverArt:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR2xQqYn30pgOBic3os_2OiiiHFD42LvuOZsaGx_eFdlsoja1iT2A4SFBhxSPk-wDwq1s&usqp=CAU", like: "🤍" }
+        { id: 9, name: 'OK!',  subgroup: "NCT U", releaseDate: '2021', coverArt:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR2xQqYn30pgOBic3os_2OiiiHFD42LvuOZsaGx_eFdlsoja1iT2A4SFBhxSPk-wDwq1s&usqp=CAU", like: "🤍" }
       ])
 
 
@@ -34,7 +34,7 @@ const SongList = () => {
 
       const renderRows = () => {
         return song.map(s => 
-        <tr>
+        <tr key={s.id}>
           <td>{s.name}</td>
           <td>{s.subgroup}</td>
           <td>{s.releaseDate}</td>
