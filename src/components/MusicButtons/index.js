@@ -19,7 +19,7 @@ const MusicButton = () => {
 
     const renderAudios = () => audio.map(a => <li key={a.id} onClick={() => handleButtonSelect(a.id)}><strong role="heading" aria-label="song">{a.song}</strong></li>)
          
-    var audioo = new Audio(BOSS);
+    var audioo = chosenButton && new Audio(chosenButton.link);
 
     function handlePlay() {
         audioo.play();
