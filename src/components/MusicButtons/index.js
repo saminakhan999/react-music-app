@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './index.css';
 import BOSS from './Audio/NCT-U-BOSS.mp3'
+import DOMINO from './Audio/WAYV-DOMINO.mp3'
 
 const MusicButton = () => {
     
     const [audio, setAudio] = useState([
-        { id: 1, song: 'BOSS'},
-        { id: 2, song: 'Domino'},   
+        { id: 1, song: 'BOSS', link: BOSS},
+        { id: 2, song: 'Domino', link: DOMINO},   
       ])
 
     const [chosenButton, setChosenButton] = useState()
@@ -20,7 +21,7 @@ const MusicButton = () => {
 
       
     function play() {
-        var audio = new Audio(BOSS);
+        var audio = new Audio(chosenButton.link);
         audio.play();
     }
 
