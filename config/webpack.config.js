@@ -41,6 +41,10 @@ const config = {
         test: /\.(png|svg|jpg|gif|pdf)$/,
         use: ['file-loader'],
       }, // transpile image files
+      {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+      },
     ],
   },
 };

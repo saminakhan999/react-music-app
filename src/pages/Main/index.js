@@ -1,5 +1,5 @@
 import React from 'react';
-import { Artist, SongList } from '../../components';
+import { Artist, MusicButton, SongList } from '../../components';
 import './index.css';
 
 function Main () {
@@ -9,6 +9,7 @@ function Main () {
         <h1 className={"main-header"}>Favourite Music by NCT</h1>
         <Artist />
         <SongList />
+        <MusicButton />
       </main>
     );
   }
