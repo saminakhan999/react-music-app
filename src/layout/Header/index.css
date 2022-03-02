@@ -9,7 +9,7 @@ nav {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-evenly;
-    color: grey;
+    color: #222222;
 }
 
 a {
@@ -18,11 +18,12 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: #38B3FF;
+    font-weight: bolder;
 }
 
 .current {
-    color: black;
+    color: #38B3FF;
     font-weight: bolder;
 }
 
