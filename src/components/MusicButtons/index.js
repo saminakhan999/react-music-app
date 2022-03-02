@@ -11,7 +11,7 @@ const MusicButton = () => {
       { id: 1, song: "BOSS", link: BOSS },
       { id: 2, song: "Domino", link: DOMINO },
       { id: 3, song: "COW", link: COW },
-      { id: 3, song: "SHEEP", link: SHEEP },
+      { id: 4, song: "SHEEP", link: SHEEP },
     ]);
 
     const [chosenButton, setChosenButton] = useState()
