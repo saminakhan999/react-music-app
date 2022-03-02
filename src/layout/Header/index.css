@@ -14,7 +14,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #222222;
 }
 
 a:hover {
@@ -22,9 +22,10 @@ a:hover {
     font-weight: bolder;
 }
 
-.current {
-    color: #38B3FF;
-    font-weight: bolder;
+a.active {
+    color: #38B3FF !important;
+    font-weight: bolder !important;
+    text-decoration: underline !important;
 }
 
 .main-header {
