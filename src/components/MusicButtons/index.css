@@ -1,0 +1,38 @@
+.listen-header {
+    text-align: center;
+}
+
+.listen-list {
+    list-style: none;
+    text-align: center;
+    margin-right: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+}
+
+.play-button, .pause-button, .stop-button {
+  background: #69BDF7;
+  border-radius: 999px;
+  box-shadow: #38B3FF 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Jua', sans-serif;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin: 20px;
+}
+

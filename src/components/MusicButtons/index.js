@@ -41,8 +41,8 @@ const MusicButton = () => {
 
     return (
       <>
-        <h3>Listen to some music here!</h3>
-        <ul> {renderAudios()} </ul>
+        <h3 className={"listen-header"}>Listen to some music here!</h3>
+        <ul className={"listen-list"}> {renderAudios()} </ul>
         {chosenButton && (
           <section className={"button-section"}>
             <button className="play-button" onClick={() => handlePlay()}>
