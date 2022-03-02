@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
-import BOSS from './Audio/COW.mp3'
-import DOMINO from './Audio/SHEEP.mp3'
+import BOSS from './Audio/NCT-U-BOSS.mp3'
+import DOMINO from './Audio/WAYV-DOMINO.mp3'
 
 const MusicButton = () => {
     

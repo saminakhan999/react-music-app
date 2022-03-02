@@ -1,12 +1,12 @@
-.main-header {
-    width: 90vw;
-    text-align: center;
-    margin: auto;
-}
-
 .hand-image {
     z-index: -1;
     position: absolute;
     width: 10vw;
     margin-top: 20px;
+}
+
+.main-header {
+    width: 90vw;
+    text-align: center;
+    margin: auto;
 }

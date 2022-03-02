@@ -9,7 +9,6 @@ function Main () {
         <h1 className={"main-header"}>Favourite Music by NCT</h1>
         <Artist />
         <SongList />
-        <MusicButton />
       </main>
     );
   }
