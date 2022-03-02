@@ -1,3 +1,7 @@
+.whole-ting {
+    margin-top: -30px;
+}
+
 nav {
     position: relative;
     background-color: #99C7F0;
@@ -23,7 +27,15 @@ a:hover {
 }
 
 .main-header {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 200;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.hand-image {
+    z-index: -1;
+    position: relative;
+    width: 10vw;
+    margin-top: -140px;
+    margin-bottom: -140px;
 }
