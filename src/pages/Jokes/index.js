@@ -1,9 +1,11 @@
 import React from "react";
+import Speech from 'react-speech';
 import {
   Headlines,
   FeaturedArticle,
 } from "../../components";
 import { Switch, Route, useHistory } from "react-router-dom";
+import "./index.css";
 
 const Jokes = () => {
   const history = useHistory();
@@ -13,7 +15,9 @@ const Jokes = () => {
   return (
     <div className="news-reader">
       <h1>A Real State of Events</h1>
-
+      <div className="speech">
+        <Speech text="Zahra is a noob b" />
+      </div>
 
       <section>
         <Switch>
