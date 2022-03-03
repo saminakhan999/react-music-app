@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 
 import './App.css';
-import { Main, Listen, About, Favourites, Jokes } from './pages';
+import { Main, Listen, About, Favourites, Games } from './pages';
 import { Header, Footer } from './layout';
 
 function App() {
@@ -21,6 +21,9 @@ function App() {
           </Route>
           <Route path="/listen">
             <Listen />
+          </Route>
+          <Route path="/games">
+            <Games />
           </Route>
         </Switch>
         <Footer />
