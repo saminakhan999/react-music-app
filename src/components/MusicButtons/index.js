@@ -1,17 +1,18 @@
+
 import React, { useState } from 'react';
 import './index.css';
 import BOSS from './Audio/NCT-U-BOSS.mp3'
 import DOMINO from './Audio/WAYV-DOMINO.mp3'
-import COW from "./Audio/COW.mp3";
-import SHEEP from "./Audio/SHEEP.mp3";
+// import COW from "./Audio/COW.mp3";
+// import SHEEP from "./Audio/SHEEP.mp3";
+import CHERRYBOMB from "./Audio/NCT-127-CHERRY-BOMB.mp3";
 
 const MusicButton = () => {
     
     const [audio, setAudio] = useState([
-      { id: 1, song: "BOSS", link: BOSS },
-      { id: 2, song: "Domino", link: DOMINO },
-      { id: 3, song: "COW", link: COW },
-      { id: 4, song: "SHEEP", link: SHEEP },
+      { id: 1, song: "BOSS", link: BOSS, artistName: "NCT", songName: "boss" },
+      { id: 2, song: "Domino", link: DOMINO, artistName: "WAYV", songName: "domino" },
+      { id: 3, song: "Cherry Bomb", link: CHERRYBOMB, artistName: "NCT", songName: "cherry-bomb"},
     ]);
 
     const [chosenButton, setChosenButton] = useState()
