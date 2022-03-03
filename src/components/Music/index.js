@@ -46,20 +46,22 @@ const SongList = () => {
       }
 
       return (
-        <table>
-          <thead>
-            <tr>
-              <th>Song</th>
-              <th>Sub-Unit</th>
-              <th>Release Date</th>
-              <th>Cover Art</th>
-              <th>Like</th>
-            </tr>
-          </thead>
-          <tbody>
-            { renderRows() }
-          </tbody>
-        </table>
+        <div className='table-div'>
+          <table>
+            <thead>
+              <tr>
+                <th>Song</th>
+                <th>Sub-Unit</th>
+                <th>Release Date</th>
+                <th>Cover Art</th>
+                <th>Like</th>
+              </tr>
+            </thead>
+            <tbody>
+              { renderRows() }
+            </tbody>
+          </table>
+        </div>
       );
 }
 

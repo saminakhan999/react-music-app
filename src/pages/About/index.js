@@ -6,7 +6,10 @@ function About () {
     return (
       <div className='about-div'>
         <Artist />
-        <img id="image1" src="https://c.tenor.com/HJvqN2i4Zs4AAAAj/milk-and-mocha-cute.gif"></img>
+        <div className='dancing-image'>
+            <img src="https://c.tenor.com/HJvqN2i4Zs4AAAAj/milk-and-mocha-cute.gif"></img>
+        </div>
+        
       </div>
     );
   }
