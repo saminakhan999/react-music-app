@@ -3,7 +3,9 @@ import './index.css';
 
 const SongList = () => {
     const [song, setSong] = useState([
-        { id: 1, name: 'Boss',  subgroup: "NCT U", releaseDate: '2018', coverArt:"https://upload.wikimedia.org/wikipedia/en/6/6b/NCT_2018_Empathy_Album_Cover.jpg", like: "🤍"},
+        { id: 0, name: 'Boss',  subgroup: "NCT U", releaseDate: '2018', coverArt:"https://upload.wikimedia.org/wikipedia/en/6/6b/NCT_2018_Empathy_Album_Cover.jpg", like: "🤍"},
+
+        { id: 1, name: 'Cherry Bomb',  subgroup: "NCT 127", releaseDate: '2017', coverArt:"https://upload.wikimedia.org/wikipedia/en/a/a7/Cherrybomb-nct.jpg", like: "🤍"},
 
         { id: 2, name: 'Domino',  subgroup: "WayV", releaseDate: '2020', coverArt:"https://www.kpoplyrics.net/wp-content/uploads/2020/06/wayv-awaken-the-world-the-1st-album-cover.jpg", like: "🤍"},
 
