@@ -12,6 +12,15 @@
     text-align: center;
 }
 
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #D0D2E7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .button-section {
     display: flex;
     justify-content: center;
