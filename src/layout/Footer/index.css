@@ -4,8 +4,14 @@
     background-color: #99C7F0;
     padding: 10px;
     display: block;
-    justify-content: space-evenly;
+    text-align: center;
+    justify-content: center;
     display: flex;
     margin: 0;
     color: #222222;
+}
+
+.speech {
+    margin-left: 10px;
+    margin-top: -1px;
 }
