@@ -1,13 +1,14 @@
 import React from 'react';
-import { Quiz } from '../../components';
+import { Simon } from '../../components';
 import './index.css';
 
 function Games () {
     return (
       <>
-        <Quiz />
+        <Simon />
       </>
     );
   }
   
-  export default Games;
+export default Games;
+
