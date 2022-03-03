@@ -1,0 +1,51 @@
+.flex-container {
+  margin: 100px auto;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  background: #222;
+  border-radius: 48%;
+  border: 200px black;
+
+  flex-wrap: wrap;
+}
+
+.colors {
+  margin: auto;
+  height: 240px;
+  width: 240px;
+}
+
+.t-l {
+  background: #8e8ebb;
+  border-top-left-radius: 100%;
+}
+
+.t-r {
+  background: #e581ee;
+  border-top-right-radius: 100%;
+}
+
+.b-l {
+  background: #38B3FF;
+  border-bottom-left-radius: 100%;
+}
+
+.b-r {
+  background: #e4a9c5;
+  border-bottom-right-radius: 100%;
+}
+
+.center {
+  position: absolute;
+  border-radius: 100%;
+  margin: 150px 0 0 150px;
+  background: white;
+  width: 200px;
+  height: 200px;
+  border: 12px solid #333;
+}
+
+#container {
+  color: black;
+}
