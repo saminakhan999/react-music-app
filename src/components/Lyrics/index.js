@@ -4,32 +4,32 @@ import axios from 'axios';
 import BackButton from '../BackButton';
 
 const Lyrics = () => {
-    const [ story, setStory ] = useState();
+    const [ lyric, setLyric ] = useState();
     const [ statusMessage, setStatusMessage ] = useState('Loading');
 
     const params = useParams();
 
     useEffect(() => {
-        const fetchStory = async () => {
+        const fetchLyric = async () => {
             setStatusMessage('Loading')
             try {   
-                let { data } = await axios.get(`https://futureproof-news.herokuapp.com/articles/${params.id}`);
-                setStory(data);
-                setStatusMessage('');
+                let { data } = await axios.get(`https://api.lyrics.ovh/v1/${params.artistName}/${params.songName}`);
+                console.log(data)
+                // setLyric(data);
+                // setStatusMessage('');
             } catch (err) {
                 console.warn(err);
                 setStatusMessage(`Oops there\'s been an issue! ${err.message}`)
             }
         }
-        fetchStory()
+        fetchLyric()
     }, [params])
 
     return ( 
-        <article aria-label="featured story" id="feature">
+        <article aria-label="featured lyric" id="feature">
             <BackButton />
-            <h3>{ statusMessage ? statusMessage : story.headline }</h3>
             <p>
-                {!statusMessage && story.body }
+                {!statusMessage && lyric.body }
             </p>
         </article>
     )
