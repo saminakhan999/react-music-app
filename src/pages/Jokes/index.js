@@ -1,5 +1,4 @@
 import React from "react";
-import Speech from 'react-speech';
 import {
   Headlines,
   FeaturedArticle,
@@ -15,9 +14,7 @@ const Jokes = () => {
   return (
     <div className="news-reader">
       <h1>A Real State of Events</h1>
-      <div className="speech">
-        <Speech text="Zahra is a noob b" />
-      </div>
+      
 
       <section>
         <Switch>

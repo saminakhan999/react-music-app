@@ -5,7 +5,7 @@ import './index.css';
 function Favourite () {
     return (
       <div>
-        <h1 className={"fave-music-header"}>Favourite Music by NCT</h1>
+        <h1 className={"fave-music-header"}>Most Popular Music by NCT</h1>
         <SongList />
       </div>
     );
