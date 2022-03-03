@@ -71,6 +71,8 @@ const MusicButton = () => {
         fetchLyric()
     }, [chosenButton])
 
+   
+
 
     /////////////////////////////////////////////////////////////////////////////
     return (
@@ -78,6 +80,7 @@ const MusicButton = () => {
         <h3 className={"listen-header"}>Listen to some music here!</h3>
         <ul className={"listen-list"}> {renderAudios()} </ul>
         {chosenButton && (
+         <div> 
           <section className={"button-section"}>
             <button className="play-button" onClick={() => handlePlay()}>
               Play {chosenButton.song}
@@ -88,8 +91,11 @@ const MusicButton = () => {
             <button className="stop-button" onClick={() => handleStop()}>
               Stop {chosenButton.song}
             </button>
-            <span> {lyric.lyrics} </span>
           </section>
+          <div className = "lyrics-div">
+            <span className="lyrics-para"> {lyric.lyrics} </span>
+          </div>
+        </div>
         )}
       </>
     );

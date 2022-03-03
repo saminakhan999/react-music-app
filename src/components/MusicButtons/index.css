@@ -36,5 +36,13 @@
   word-break: break-word;
   border: 0;
   margin: 20px;
+  display: block;
+}
+
+.lyrics-div {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    white-space: pre-line;
 }
 
