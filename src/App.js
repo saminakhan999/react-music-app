@@ -16,7 +16,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/favourite">
+          <Route path="/songs">
             <Favourites />
           </Route>
           <Route path="/listen">
