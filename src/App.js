@@ -22,9 +22,6 @@ function App() {
           <Route path="/listen">
             <Listen />
           </Route>
-          <Route path="/jokes">
-            <Jokes/>
-          </Route>
         </Switch>
         <Footer />
       </>

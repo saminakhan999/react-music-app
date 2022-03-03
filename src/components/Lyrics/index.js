@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import BackButton from '../BackButton';
 
-const FeaturedArticle = () => {
+const Lyrics = () => {
     const [ story, setStory ] = useState();
     const [ statusMessage, setStatusMessage ] = useState('Loading');
 
@@ -35,4 +35,4 @@ const FeaturedArticle = () => {
     )
 }
 
-export default FeaturedArticle;
+export default Lyrics;
