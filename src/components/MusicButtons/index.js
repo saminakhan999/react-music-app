@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './index.css';
 import BOSS from './Audio/NCT-U-BOSS.mp3'
 import DOMINO from './Audio/WAYV-DOMINO.mp3'
@@ -15,6 +16,7 @@ const MusicButton = () => {
       { id: 3, song: "Cherry Bomb", link: CHERRYBOMB, artistName: "NCT", songName: "cherry-bomb"},
     ]);
 
+    ///////////////////////////////////////////////////////////////////////////////
     const [chosenButton, setChosenButton] = useState()
 
     const handleButtonSelect = (buttonId) => {
@@ -40,10 +42,37 @@ const MusicButton = () => {
     function handleStop() {
         audioo.pause();
         audioo.currentTime = 0;
-
     }
+    /////////////////////////////////////////////////////////////////////////////
+
+    const [ lyric, setLyric ] = useState([
+        { id: 1, artistName: "NCT", songName: "boss" },
+        { id: 2, artistName: "WAYV", songName: "domino" },
+        { id: 3, artistName: "NCT", songName: "cherry-bomb" },
+      ]);
+
+    const [ statusMessage, setStatusMessage ] = useState('Loading');
+
+    // const params = useParams();
+
+    useEffect(() => {
+        const fetchLyric = async () => {
+            setStatusMessage('Loading')
+            try {   
+                let { data } =  chosenButton && await axios.get(`https://api.lyrics.ovh/v1/${chosenButton.artistName}/${chosenButton.songName}`);
+                console.log(data)
+                setLyric(data);
+                setStatusMessage('');
+            } catch (err) {
+                console.warn(err);
+                setStatusMessage(`Oops there\'s been an issue! ${err.message}`)
+            }
+        }
+        fetchLyric()
+    }, [chosenButton])
 
 
+    /////////////////////////////////////////////////////////////////////////////
     return (
       <>
         <h3 className={"listen-header"}>Listen to some music here!</h3>
@@ -59,6 +88,7 @@ const MusicButton = () => {
             <button className="stop-button" onClick={() => handleStop()}>
               Stop {chosenButton.song}
             </button>
+            <span> {lyric.lyrics} </span>
           </section>
         )}
       </>

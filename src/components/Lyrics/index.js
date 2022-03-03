@@ -4,7 +4,13 @@ import axios from 'axios';
 import BackButton from '../BackButton';
 
 const Lyrics = () => {
-    const [ lyric, setLyric ] = useState();
+
+    const [ lyric, setLyric ] = useState([
+        { id: 1, artistName: "NCT", songName: "boss" },
+        { id: 2, artistName: "WAYV", songName: "domino" },
+        { id: 3, artistName: "NCT", songName: "cherry-bomb" },
+      ]);
+      
     const [ statusMessage, setStatusMessage ] = useState('Loading');
 
     const params = useParams();
