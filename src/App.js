@@ -10,11 +10,21 @@ function App() {
       <>
         <Header />
         <Switch>
-          <Route exact path="/"><Main /></Route>
-          <Route path="/about"><About /></Route>
-          <Route path="/favourite"><Favourites /></Route>
-          <Route path="/listen"><Listen /></Route>
-          <Route exact path="/jokes" render= {() => <h1> Welcome to da jokes brooooo!</h1>} />
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/favourite">
+            <Favourites />
+          </Route>
+          <Route path="/listen">
+            <Listen />
+          </Route>
+          <Route path="/jokes">
+            <Jokes/>
+          </Route>
         </Switch>
         <Footer />
       </>
