@@ -5,6 +5,7 @@ import './index.css';
 function Games () {
     return (
       <>
+      <h1>SIMON SAYS</h1>
         <Simon />
       </>
     );
