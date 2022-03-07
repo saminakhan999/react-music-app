@@ -5,7 +5,7 @@ import './index.css';
 const Footer = () => {
     return (
     <>
-        <span id="footer">&copy; MAHARANI INC. 
+        <span role = "maharani" id="footer">&copy; MAHARANI INC. 
         <div className="speech">
             <Speech text="Maharani Inc is really cool" />
         </div>
