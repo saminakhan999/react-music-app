@@ -1,9 +1,26 @@
 .simon-div {
     display: block;
-    width: 100px;
+    width: 10px;
     margin: auto;
 }
 
 .simon-title {
     display: block;
 }
+
+.stop-button {
+    background: #69BDF7;
+    border-radius: 999px;
+    box-shadow: #38B3FF 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Jua', sans-serif;
+    line-height: 24px;
+    padding: 8px 18px;
+    border: 0;
+    margin: 20px;
+    display: block;
+  }

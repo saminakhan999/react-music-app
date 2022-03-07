@@ -5,10 +5,18 @@ import './index.css';
 import SIMONSAYS from "../../components/MusicButtons/Audio/NCT-127-SIMON-SAYS.mp3";
 
 let sound = new Audio(SIMONSAYS)
-
+var isSimonDead = true
 function handlePlay() {
-    sound.play();
-    sound.volume = 0.05;
+    if (isSimonDead) {
+        sound.play();
+        sound.volume = 0.05;
+    }
+    isSimonDead = false
+}
+
+function handleStop() {
+    sound.pause();
+    sound.currentTime = 0;
 }
 
 function Games () {
@@ -19,6 +27,8 @@ function Games () {
             <div className="simon-div" onClick={() => {handlePlay()}}>
                 <Simon />
             </div>
+            <button className='stop-button' onClick={() => {handleStop()}}>Simon Says STOP (the music)</button>
+
         </>
     );
   }
