@@ -1,8 +1,4 @@
-var sound1 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
-var sound2 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
-var sound3 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
-var sound4 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
-var soundBoard = [sound1, sound2, sound3, sound4];
+
 
 import "./index.css";
 import React, { useState, useEffect } from "react";
@@ -62,12 +58,12 @@ const Simon = () => {
   }, [isOn, play.isDisplay, play.colors.length]);
 
   async function displayColors() {
-    await timeout(1000);
+    await timeout(2000);
     for (let i = 0; i < play.colors.length; i++) {
       setFlashColor(play.colors[i]);
-      await timeout(1000);
+      await timeout(500);
       setFlashColor("");
-      await timeout(1000);
+      await timeout(500);
 
       if (i === play.colors.length - 1 ) {
         const copyColors = [...play.colors];
@@ -87,6 +83,7 @@ const Simon = () => {
 
 
   async function cardClickHandle(color) {
+    
     if (!play.isDisplay && play.userPlay) {
       const copyUserColors = [...play.userColors];
       const lastColor = copyUserColors.pop();
@@ -96,7 +93,7 @@ const Simon = () => {
         if (copyUserColors.length) {
           setPlay({ ...play, userColors: copyUserColors });
         } else {
-          await timeout(1000);
+          await timeout(500);
           setPlay({
             ...play,
             isDisplay: true,
@@ -106,10 +103,10 @@ const Simon = () => {
           });
         }
       } else {
-        await timeout(1000);
+        await timeout(500);
         setPlay({ ...initPlay, score: play.colors.length });
       }
-      await timeout(1000);
+      await timeout(500);
       setFlashColor("");
     }
   }
