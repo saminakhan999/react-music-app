@@ -12,3 +12,6 @@ config.devServer = {
 config.devtool = 'inline-source-map'; // a tool to find errors in the compiled code, but show them against the source code for easier debugging
 
 module.exports = config;
+
+
+module.exports = config;
