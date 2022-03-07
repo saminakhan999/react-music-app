@@ -55,11 +55,7 @@ const MusicButton = () => {
     }
     /////////////////////////////////////////////////////////////////////////////
 
-    const [ lyric, setLyric ] = useState([
-        { id: 1, artistName: "NCT", songName: "boss" },
-        { id: 2, artistName: "WAYV", songName: "domino" },
-        { id: 3, artistName: "NCT", songName: "cherry-bomb" },
-      ]);
+    const [ lyric, setLyric ] = useState([]);
 
     const [ statusMessage, setStatusMessage ] = useState('Loading');
 
