@@ -91,13 +91,13 @@ const MusicButton = () => {
         {chosenButton && (
          <div> 
           <section className={"button-section"}>
-            <button className="play-button" onClick={() => handlePlay()}>
+            <button className="play-button" role="play-button" onClick={() => handlePlay()}>
               Play {chosenButton.song}
             </button>
-            <button className="pause-button" onClick={() => handlePause()}>
+            <button className="pause-button" role="pause-button" onClick={() => handlePause()}>
               Pause {chosenButton.song}
             </button>
-            <button className="stop-button" onClick={() => handleStop()}>
+            <button className="stop-button" role="the-stop-button" onClick={() => handleStop()}>
               Stop {chosenButton.song}
             </button>
           </section>
