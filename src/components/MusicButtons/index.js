@@ -34,7 +34,7 @@ const MusicButton = () => {
         setChosenButton(chosenButton);
     };
 
-    const renderAudios = () => audio.map(a => <li key={a.id} onClick={() => handleButtonSelect(a.id)}><strong role="heading" aria-label="song">{a.song}</strong></li>)
+    const renderAudios = () => audio.map(a => <li key={a.id} onClick={() => handleButtonSelect(a.id)}><strong role={a.id} aria-label="song">{a.song}</strong></li>)
          
     var audioo = chosenButton && new Audio(chosenButton.link);
 
@@ -98,7 +98,7 @@ const MusicButton = () => {
             </button>
           </section>
           <div className = "lyrics-div">
-            <span className="lyrics-para"> {lyric.lyrics} </span>
+            <span role={chosenButton.song} className="lyrics-para"> {lyric.lyrics} </span>
           </div>
         </div>
         )}
