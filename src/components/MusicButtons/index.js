@@ -86,7 +86,7 @@ const MusicButton = () => {
     /////////////////////////////////////////////////////////////////////////////
     return (
       <>
-        <h3 className={"listen-header"}>Listen to some music here!</h3>
+        <h3 className={"listen-header"} role={"listen-header"}>Listen to some music here!</h3>
         <ul className={"listen-list"}> {renderAudios()} </ul>
         {chosenButton && (
          <div> 
