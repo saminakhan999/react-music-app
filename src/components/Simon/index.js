@@ -121,7 +121,7 @@ const Simon = () => {
         <div className="cardWrapper">
           {colorList &&
             colorList.map((v) => (
-              <ColorCard
+              <ColorCard key={v} 
                 onClick={() => {
                   cardClickHandle(v);
                 }}
