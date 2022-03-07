@@ -14,9 +14,9 @@ function handlePlay() {
 function Games () {
     return (
         <>
-            <h1>SIMON SAYS</h1>
+            <h1 className='simon-title'>SIMON SAYS</h1>
             <br />
-            <div onClick={() => {handlePlay()}}>
+            <div className="simon-div" onClick={() => {handlePlay()}}>
                 <Simon />
             </div>
         </>
