@@ -41,7 +41,7 @@ const SongList = () => {
           <td>{s.subgroup}</td>
           <td>{s.releaseDate}</td>
           <td><img src={s.coverArt} width="150"/></td>
-          <td><p id={s.name} onClick={handleLike} className={"heartFont"}>{s.like}</p></td>
+          <td><p role={s.name} id={s.name} onClick={handleLike} className={"heartFont"}>{s.like}</p></td>
         </tr>)
       }
 
