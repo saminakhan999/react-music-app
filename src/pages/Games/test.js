@@ -15,8 +15,10 @@
         expect(screen.getByRole("heading").textContent).toBe("SIMON SAYS");
     });
 
-    test("clicking it plays music", () => {
-        // come back to this
-    });
+    test("clicking it stops music", () => {
+        const stopButton = screen.getByRole("stop-button");
+        userEvent.click(stopButton);
+        expect(stopButton.textContent).toBe("Simon Says STOP (the music)");
+     });
    
  });

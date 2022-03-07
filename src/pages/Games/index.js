@@ -27,7 +27,7 @@ function Games () {
             <div className="simon-div" onClick={() => {handlePlay()}}>
                 <Simon />
             </div>
-            <button className='stop-button' onClick={() => {handleStop()}}>Simon Says STOP (the music)</button>
+            <button role="stop-button" className='stop-button' onClick={() => {handleStop()}}>Simon Says STOP (the music)</button>
 
         </>
     );
